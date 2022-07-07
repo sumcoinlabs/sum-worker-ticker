@@ -3,7 +3,7 @@ addEventListener('fetch', (event) => {
 })
 
 async function handleRequest(request) {
-  const data = await peercoin_kv.get('prices', { type: 'json' })
+  const data = await sumcoin_kv.get('prices', { type: 'json' })
   const json = JSON.stringify(data, null, 2)
 
   return new Response(json, {
